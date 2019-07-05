@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>uk.ac.ebi.ddi</groupId>
 		<artifactId>springboot-base-master</artifactId>
-		<version>1.0</version>
+		<version>1.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>uk.ac.ebi.ddi.task</groupId>
@@ -65,6 +65,7 @@
 			<version>2.2.0</version>
 			<scope>test</scope>
 		</dependency>
+
 
 	</dependencies>
 
