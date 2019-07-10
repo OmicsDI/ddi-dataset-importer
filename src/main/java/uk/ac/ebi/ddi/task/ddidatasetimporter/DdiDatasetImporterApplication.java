@@ -9,12 +9,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import uk.ac.ebi.ddi.ddifileservice.DdiFileServiceApplication;
 import uk.ac.ebi.ddi.ddifileservice.services.IFileSystem;
 import uk.ac.ebi.ddi.service.db.model.dataset.Dataset;
+import uk.ac.ebi.ddi.service.db.model.dataset.DatasetFile;
+import uk.ac.ebi.ddi.service.db.service.dataset.DatasetFileService;
 import uk.ac.ebi.ddi.service.db.service.dataset.IDatasetService;
 import uk.ac.ebi.ddi.task.ddidatasetimporter.configuration.DatasetImportTaskProperties;
 import uk.ac.ebi.ddi.task.ddidatasetimporter.services.DatabaseImporterService;
 import uk.ac.ebi.ddi.task.ddidatasetimporter.services.DatasetImporterService;
 import uk.ac.ebi.ddi.task.ddidatasetimporter.utils.Constants;
 import uk.ac.ebi.ddi.task.ddidatasetimporter.utils.DatasetUtils;
+import uk.ac.ebi.ddi.task.ddidatasetimporter.utils.EntryUtils;
 import uk.ac.ebi.ddi.xml.validator.exception.DDIException;
 import uk.ac.ebi.ddi.xml.validator.parser.OmicsXMLFile;
 import uk.ac.ebi.ddi.xml.validator.parser.model.Entry;
@@ -24,7 +27,9 @@ import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
 
+import static uk.ac.ebi.ddi.ddidomaindb.dataset.DSField.Additional.DATASET_FILE;
 import static uk.ac.ebi.ddi.ddidomaindb.dataset.DSField.Additional.SUBMITTER_KEYWORDS;
+import static uk.ac.ebi.ddi.service.db.utils.Constants.FROM_DATASET_IMPORT;
 
 @SpringBootApplication()
 public class DdiDatasetImporterApplication implements CommandLineRunner {
@@ -43,6 +48,9 @@ public class DdiDatasetImporterApplication implements CommandLineRunner {
 
     @Autowired
     private IDatasetService datasetService;
+
+    @Autowired
+    private DatasetFileService datasetFileService;
 
     private boolean isDatabaseUpdated = false;
 
@@ -99,6 +107,13 @@ public class DdiDatasetImporterApplication implements CommandLineRunner {
                     .distinct()
                     .forEach(tr -> dataEntry.addAdditionalField(SUBMITTER_KEYWORDS.key(), tr));
 
+            // Update list of files
+            List<String> files = EntryUtils.removeField(dataEntry, DATASET_FILE.key());
+            datasetFileService.deleteAll(dataEntry.getId(), dbName, FROM_DATASET_IMPORT);
+            datasetFileService.saveAll(files.stream()
+                    .map(x -> new DatasetFile(dataEntry.getId(), dbName, x, FROM_DATASET_IMPORT))
+                    .collect(Collectors.toList()));
+
             LOGGER.debug("inserting: " + dataEntry.getId() + " " + dbName + "");
 
             datasetImporterService.insertDataset(dataEntry, dbName);
@@ -109,8 +124,7 @@ public class DdiDatasetImporterApplication implements CommandLineRunner {
 
     private synchronized void updateDatabaseInfo(OmicsXMLFile file) {
         if (!isDatabaseUpdated) {
-            databaseImporterService.updateDatabase(
-                    taskProperties.getDatabaseName(),
+            databaseImporterService.updateDatabase(taskProperties.getDatabaseName(),
                     file.getDescription(), file.getReleaseDate(), file.getRelease(), null, null);
             isDatabaseUpdated = true;
         }

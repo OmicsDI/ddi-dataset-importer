@@ -62,6 +62,23 @@
         <field name="submitter_email">kooks@cyllene.uwa.edu.au</field>
         <field name="species">Arabidopsis Thaliana</field>
         <field name="repository">ArrayExpress</field>
+          <field name="dataset_file">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2017/07/PXD006550/HMW.group</field>
+          <field name="dataset_file">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2017/07/PXD006550/HMW.xml</field>
+          <field name="dataset_file">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2017/07/PXD006550/LMW.group</field>
+          <field name="dataset_file">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2017/07/PXD006550/LMW.xml</field>
+          <field name="dataset_file">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2017/07/PXD006550/HMW-P1-SWATH.zip</field>
+          <field name="dataset_file">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2017/07/PXD006550/HMW-P2-SWATH.zip</field>
+          <field name="dataset_file">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2017/07/PXD006550/HMW-P3-SWATH.zip</field>
+          <field name="dataset_file">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2017/07/PXD006550/HMW-P4-SWATH.zip</field>
+          <field name="dataset_file">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2017/07/PXD006550/HMW-library-IDA.zip</field>
+          <field name="dataset_file">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2017/07/PXD006550/LMW-SWATH.zip</field>
+          <field name="dataset_file">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2017/07/PXD006550/LMW-library-IDA.zip</field>
+          <field name="dataset_file">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2017/07/PXD006550/HMW.mgf</field>
+          <field name="dataset_file">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2017/07/PXD006550/LMW.mgf</field>
+          <field name="dataset_file">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2017/07/PXD006550/HMW-SWATH_library.txt</field>
+          <field name="dataset_file">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2017/07/PXD006550/HMW__FDR.xlsx</field>
+          <field name="dataset_file">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2017/07/PXD006550/LMW-SWATH_library.txt</field>
+          <field name="dataset_file">ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2017/07/PXD006550/LMW__FDR.xlsx</field>
       </additional_fields>
     </entry>
     <entry id="E-ATMX-1">

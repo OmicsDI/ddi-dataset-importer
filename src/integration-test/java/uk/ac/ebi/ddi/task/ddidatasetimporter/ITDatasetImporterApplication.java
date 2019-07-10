@@ -13,6 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import uk.ac.ebi.ddi.ddifileservice.services.IFileSystem;
 import uk.ac.ebi.ddi.service.db.model.dataset.Database;
 import uk.ac.ebi.ddi.service.db.model.dataset.Dataset;
+import uk.ac.ebi.ddi.service.db.service.dataset.DatasetFileService;
 import uk.ac.ebi.ddi.service.db.service.dataset.IDatabaseService;
 import uk.ac.ebi.ddi.service.db.service.dataset.IDatasetService;
 import uk.ac.ebi.ddi.task.ddidatasetimporter.configuration.DatasetImportTaskProperties;
@@ -45,6 +46,9 @@ public class ITDatasetImporterApplication {
 	@Autowired
 	private DdiDatasetImporterApplication application;
 
+	@Autowired
+	private DatasetFileService datasetFileService;
+
 	@Before
 	public void setUp() throws Exception {
 		File file = new File(taskProperties.getInputDirectory());
@@ -73,6 +77,9 @@ public class ITDatasetImporterApplication {
 		Assert.assertNotNull(database);
 		Assert.assertEquals("ArrayExpress", database.getName());
 		Assert.assertTrue(database.getDescription().contains("ArrayExpress Archive"));
+
+		List<String> files = datasetFileService.getFiles("E-ATMX-19", taskProperties.getDatabaseName());
+		Assert.assertEquals(17, files.size());
 	}
 
 	@After
