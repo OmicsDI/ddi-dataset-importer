@@ -72,8 +72,12 @@ public class DdiDatasetImporterApplication implements CommandLineRunner {
         }
 
         for (String filePath : files) {
-            LOGGER.info("Processing file {}", filePath);
-            process(fileSystem.getFile(filePath));
+            try {
+                LOGGER.info("Processing file {}", filePath);
+                process(fileSystem.getFile(filePath));
+            } catch (Exception e) {
+                LOGGER.error("Exception occurred when processing file {}, ", filePath, e);
+            }
         }
 
         Set<String> databases = threadSafeList.parallelStream().map(Map.Entry::getValue).collect(Collectors.toSet());
