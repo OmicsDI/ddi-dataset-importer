@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>uk.ac.ebi.ddi.task</groupId>
 	<artifactId>ddi-dataset-importer</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<name>ddi-dataset-importer</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -50,7 +50,7 @@
 		<dependency>
 			<groupId>uk.ac.ebi.ddi</groupId>
 			<artifactId>ddi-service-db</artifactId>
-			<version>1.3</version>
+			<version>1.4</version>
 		</dependency>
 
 		<dependency>

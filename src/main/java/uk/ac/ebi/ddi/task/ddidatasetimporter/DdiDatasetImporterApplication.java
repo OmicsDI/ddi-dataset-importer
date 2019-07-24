@@ -106,7 +106,7 @@ public class DdiDatasetImporterApplication implements CommandLineRunner {
             String dbName = DatasetUtils.getDbName(dataEntry, omicsXMLFile.getDatabaseName());
 
             dataEntry.getAdditionalFieldValues(SUBMITTER_KEYWORDS.key())
-                    .parallelStream()
+                    .stream()
                     .flatMap(dt -> Arrays.stream(dt.split(Constants.SEMI_COLON_TOKEN)))
                     .distinct()
                     .forEach(tr -> dataEntry.addAdditionalField(SUBMITTER_KEYWORDS.key(), tr));
