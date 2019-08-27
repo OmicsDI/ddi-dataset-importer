@@ -6,7 +6,7 @@ COPY ./ /root/
 # Compilation
 RUN mvn package
 
-FROM openjdk:8-jdk-alpine
+FROM openjdk:8-jre-alpine
 
 COPY --from=builder /root/target/*.jar /
 
