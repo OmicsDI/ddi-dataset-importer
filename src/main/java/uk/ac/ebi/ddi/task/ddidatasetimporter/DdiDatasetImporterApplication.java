@@ -128,7 +128,7 @@ public class DdiDatasetImporterApplication implements CommandLineRunner {
 
     private synchronized void updateDatabaseInfo(OmicsXMLFile file) {
         if (!isDatabaseUpdated) {
-            databaseImporterService.updateDatabase(taskProperties.getDatabaseName(),
+            databaseImporterService.updateDatabase(file.getDatabaseName(),
                     file.getDescription(), file.getReleaseDate(), file.getRelease(), null, null);
             isDatabaseUpdated = true;
         }
