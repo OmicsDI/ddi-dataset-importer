@@ -11,7 +11,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 import uk.ac.ebi.ddi.ddifileservice.services.IFileSystem;
-import uk.ac.ebi.ddi.service.db.model.dataset.Database;
 import uk.ac.ebi.ddi.service.db.model.dataset.Dataset;
 import uk.ac.ebi.ddi.service.db.service.dataset.DatasetFileService;
 import uk.ac.ebi.ddi.service.db.service.dataset.IDatabaseService;
@@ -56,6 +55,8 @@ public class ITDatasetImporterApplication {
 
 		File importFile = new File(getClass().getClassLoader().getResource("ARRAY_EXPRESS_EBE_1.xml").getFile());
 		fileSystem.copyFile(importFile, taskProperties.getInputDirectory() + "/ARRAY_EXPRESS_EBE_1.xml");
+		importFile = new File(getClass().getClassLoader().getResource("BIOMODELS_EBEYE_66.xml").getFile());
+		fileSystem.copyFile(importFile, taskProperties.getInputDirectory() + "/BIOMODELS_EBEYE_66.xml");
 	}
 
 	@Test
@@ -72,11 +73,6 @@ public class ITDatasetImporterApplication {
 		Assert.assertEquals(11, dataset.getAdditional().size());
 		Assert.assertEquals("Inserted", dataset.getCurrentStatus());
 		Assert.assertTrue(dataset.getDescription().contains("Plants with genotypes"));
-
-		Database database = databaseService.read(taskProperties.getDatabaseName());
-		Assert.assertNotNull(database);
-		Assert.assertEquals("ArrayExpress", database.getName());
-		Assert.assertTrue(database.getDescription().contains("ArrayExpress Archive"));
 
 		List<String> files = datasetFileService.getFiles("E-ATMX-19", taskProperties.getDatabaseName());
 		Assert.assertEquals(17, files.size());

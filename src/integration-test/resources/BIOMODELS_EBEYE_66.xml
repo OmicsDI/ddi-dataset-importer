@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><database>
+  <name>BioModels</name>
+  <description>BioModels is a repository of mathematical models of biological processes.
+            Models described from literature are manually curated and enriched with cross-references.
+            </description>
+  <release>1</release>
+  <release_date>Wed Sep 04 17:25:00 BST 2019</release_date>
+  <entry_count>1000</entry_count>
+  
+<entries><entry id="BIOMD0000000143">
+      <name>Olsen2003_neutrophil_oscillatory_metabolism</name>
+      <description>
+      
+        
+Olsen2003_neutrophil_oscillatory_metabolism
+
+  This model is described in the article:
+  
+    A model of the oscillatory
+    metabolism of activated neutrophils.
+  
+  Olsen LF, Kummer U, Kindzelskii AL,
+  Petty HR.
+  Biophys. J. 2003 Jan; 84(1):
+  69-81
+  Abstract:
+  
+    We present a two-compartment model to explain the
+    oscillatory behavior observed experimentally in activated
+    neutrophils. Our model is based mainly on the
+    peroxidase-oxidase reaction catalyzed by myeloperoxidase with
+    melatonin as a cofactor and NADPH oxidase, a major protein in
+    the phagosome membrane of the leukocyte. The model predicts
+    that after activation of a neutrophil, an increase in the
+    activity of the hexose monophosphate shunt and the delivery of
+    myeloperoxidase into the phagosome results in oscillations in
+    oxygen and NAD(P)H concentration. The period of oscillation
+    changes from &gt;200 s to 10-30 s. The model is consistent with
+    previously reported oscillations in cell metabolism and oxidant
+    production. Key features and predictions of the model were
+    confirmed experimentally. The requirement of the hexose
+    monophosphate pathway for 10 s oscillations was verified using
+    6-aminonicotinamide and dexamethasone, which are inhibitors of
+    glucose-6-phosphate dehydrogenase. The role of the NADPH
+    oxidase in promoting oscillations was confirmed by
+    dose-response studies of the effect of diphenylene iodonium, an
+    inhibitor of the NADPH oxidase. Moreover, the model predicted
+    an increase in the amplitude of NADPH oscillations in the
+    presence of melatonin, which was confirmed experimentally.
+    Successful computer modeling of complex chemical dynamics
+    within cells and their chemical perturbation will enhance our
+    ability to identify new antiinflammatory compounds.
+  
+
+
+  This model is hosted on 
+  BioModels Database
+  and identified by: 
+  BIOMD0000000143.
+  To cite BioModels Database, please use: 
+  BioModels Database:
+  An enhanced, curated and annotated resource for published
+  quantitative kinetic models.
+
+
+  To the extent possible under law, all copyright and related or
+  neighbouring rights to this encoded model have been dedicated to
+  the public domain worldwide. Please refer to 
+  CC0
+  Public Domain Dedication for more information.
+
+
+    </description>
+      <dates>
+        <date type="submission" value="2014-06-03"/>
+        <date type="publication" value="2007-07-27"/>
+        <date type="last_modification" value="2014-06-03"/>
+      </dates>
+      <additional_fields>
+        <field name="submitter">Harish Dharuri</field>
+        <field name="submitter_mail">hdharuri@cds.caltech.edu</field>
+        <field name="submitter_affiliation">California Institute of Technology</field>
+        <field name="repository">BioModels</field>
+        <field name="full_dataset_link">https://www.ebi.ac.uk/biomodels/BIOMD0000000143</field>
+        <field name="publication">
+                            We present a two-compartment model to explain the oscillatory behavior observed experimentally in activated neutrophils. Our model is based mainly on the peroxidase-oxidase reaction catalyzed by myeloperoxidase with melatonin as a cofactor and NADPH oxidase, a major protein in the phagosome membrane of the leukocyte. The model predicts that after activation of a neutrophil, an increase in the activity of the hexose monophosphate shunt and the delivery of myeloperoxidase into the phagosome results in oscillations in oxygen and NAD(P)H concentration. The period of oscillation changes from &gt;200 s to 10-30 s. The model is consistent with previously reported oscillations in cell metabolism and oxidant production. Key features and predictions of the model were confirmed experimentally. The requirement of the hexose monophosphate pathway for 10 s oscillations was verified using 6-aminonicotinamide and dexamethasone, which are inhibitors of glucose-6-phosphate dehydrogenase. The role of the NADPH oxidase in promoting oscillations was confirmed by dose-response studies of the effect of diphenylene iodonium, an inhibitor of the NADPH oxidase. Moreover, the model predicted an increase in the amplitude of NADPH oscillations in the presence of melatonin, which was confirmed experimentally. Successful computer modeling of complex chemical dynamics within cells and their chemical perturbation will enhance our ability to identify new antiinflammatory compounds.. null, 84.
+                            European Media Laboratory, Schloss-Wolfsbrunnenweg 33, D-69118 Heidelberg, Germany. lfo@dou.dk</field>
+        <field name="omics_type">Models</field>
+        <field name="modelFormat">SBML</field>
+        <field name="submissionId">MODEL5564211615</field>
+        <field name="publicationId">BIOMD0000000143</field>
+        <field name="publication_year">2003</field>
+        <field name="levelVersion">L2V1</field>
+        <field name="curationStatus">Manually curated</field>
+        <field name="non_derived_xrefs">MODEL5564211615 biomodels.db BIOMD0000000143 biomodels.db</field>
+        <field name="publication_authors">Olsen LF, Kummer U, Kindzelskii AL, Petty HR</field>
+        <field name="first_author">Olsen LF</field>
+        <field name="tokenised_name">Olsen2003 neutrophil oscillatory metabolism</field>
+      </additional_fields>
+      <cross_references>
+        <ref dbkey="40674" dbname="taxonomy"/>
+        <ref dbkey="12524266" dbname="pubmed"/>
+        <ref dbkey="10.1021/j100023a001" dbname="doi"/>
+        <ref dbkey="11901676" dbname="pubmed"/>
+        <ref dbkey="GO:0030186" dbname="go"/>
+        <ref dbkey="GO:0016692" dbname="go"/>
+        <ref dbkey="GO:0032009" dbname="go"/>
+        <ref dbkey="GO:0005737" dbname="go"/>
+        <ref dbkey="CHEBI:16240" dbname="chebi"/>
+        <ref dbkey="C00027" dbname="kegg.compound"/>
+        <ref dbkey="IPR000823" dbname="interpro"/>
+        <ref dbkey="PIRSF000293" dbname="pirsf"/>
+        <ref dbkey="C01598" dbname="kegg.compound"/>
+        <ref dbkey="CHEBI:16796" dbname="chebi"/>
+        <ref dbkey="C00704" dbname="kegg.compound"/>
+        <ref dbkey="CHEBI:18421" dbname="chebi"/>
+        <ref dbkey="CHEBI:18276" dbname="chebi"/>
+        <ref dbkey="C00282" dbname="kegg.compound"/>
+        <ref dbkey="C00007" dbname="kegg.compound"/>
+        <ref dbkey="CHEBI:15379" dbname="chebi"/>
+        <ref dbkey="C00005" dbname="kegg.compound"/>
+        <ref dbkey="CHEBI:16474" dbname="chebi"/>
+        <ref dbkey="C00006" dbname="kegg.compound"/>
+        <ref dbkey="CHEBI:18009" dbname="chebi"/>
+        <ref dbkey="1.15.1.1" dbname="ec-code"/>
+        <ref dbkey="R00275" dbname="kegg.reaction"/>
+        <ref dbkey="R07172" dbname="kegg.reaction"/>
+        <ref dbkey="1.6.3.1" dbname="ec-code"/>
+      </cross_references>
+    </entry><entry id="BIOMD0000000162">
+      <name>Hernjak2005_Calcium_Signaling</name>
+      <description>
+      
+        The model reproduces the time profiles of Calcium in the spine and dendrites as depicted in Fig 8 and Fig 9 of the paper for CF activation.
+            The model was reproduced using MathSBML.
+            Please note that the units of volume species is molecules/micrometer cubed as against the units of microMolar given in the paper. To convert the units to microMolar multiply the species concentration by the conversion factor 1/602.
+            
+            This model originates from BioModels Database: A Database of Annotated Published Models. It is copyright (c) 2005-2010 The BioModels Team.      
+          For more information see the      terms of use
+          .      
+          To cite BioModels Database, please use      Le Novère N., Bornstein B., Broicher A., Courtot M., Donizelli M., Dharuri H., Li L., Sauro H., Schilstra M., Shapiro B., Snoep J.L., Hucka M. (2006) BioModels Database: A Free, Centralized Database of Curated, Published, Quantitative Kinetic Models of Biochemical and Cellular Systems Nucleic Acids Res., 34: D689-D691.
+                
+            
+      
+    </description>
+      <dates>
+        <date type="submission" value="2008-01-30"/>
+        <date type="publication" value="2008-01-28"/>
+        <date type="last_modification" value="2014-02-20"/>
+      </dates>
+      <additional_fields>
+        <field name="submitter">Harish Dharuri</field>
+        <field name="submitter_mail">hdharuri@cds.caltech.edu</field>
+        <field name="submitter_affiliation">California Institute of Technology</field>
+        <field name="repository">BioModels</field>
+        <field name="full_dataset_link">https://www.ebi.ac.uk/biomodels/BIOMD0000000162</field>
+        <field name="publication">
+                            Modeling and simulation of the calcium signaling events that precede long-term depression of synaptic activity in cerebellar Purkinje cells are performed using the Virtual Cell biological modeling framework. It is found that the unusually high density and low sensitivity of inositol-1,4,5-trisphosphate receptors (IP3R) are critical to the ability of the cell to generate and localize a calcium spike in a single dendritic spine. The results also demonstrate the model's capability to simulate the supralinear calcium spike observed experimentally during coincident activation of the parallel and climbing fibers. The sensitivity of the calcium spikes to certain biological and geometrical effects is investigated as well as the mechanisms that underlie the cell's ability to generate the supralinear spike. The sensitivity of calcium release rates from the IP3R to calcium concentrations, as well as IP3 concentrations, allows the calcium spike to form. The diffusion barrier caused by the small radius of the spine neck is shown to be important, as a threshold radius is observed above which a spike cannot be formed. Additionally, the calcium buffer capacity and diffusion rates from the spine are found to be important parameters in shaping the calcium spike.. null, 89.
+                            Center for Cell Analysis and Modeling, University of Connecticut Health Center, Farmington, Connecticut.</field>
+        <field name="omics_type">Models</field>
+        <field name="modelFormat">SBML</field>
+        <field name="submissionId">MODEL1629310283</field>
+        <field name="publicationId">BIOMD0000000162</field>
+        <field name="publication_year">2005</field>
+        <field name="levelVersion">L2V1</field>
+        <field name="curationStatus">Manually curated</field>
+        <field name="non_derived_xrefs">MODEL1629310283 biomodels.db BIOMD0000000162 biomodels.db</field>
+        <field name="publication_authors">Hernjak N, Slepchenko BM, Fernald K, Fink CC, Fortin D, Moraru II, Watras J, Loew LM</field>
+        <field name="first_author">Hernjak N</field>
+        <field name="tokenised_name">Hernjak2005 Calcium Signaling</field>
+      </additional_fields>
+      <cross_references>
+        <ref dbkey="C00076" dbname="kegg.compound"/>
+        <ref dbkey="CHEBI:29108" dbname="chebi"/>
+        <ref dbkey="16169982" dbname="pubmed"/>
+        <ref dbkey="hsa04730" dbname="kegg.pathway"/>
+        <ref dbkey="GO:0060025" dbname="go"/>
+        <ref dbkey="GO:0006816" dbname="go"/>
+        <ref dbkey="7711" dbname="taxonomy"/>
+        <ref dbkey="BTO:0001011" dbname="bto"/>
+        <ref dbkey="GO:0005576" dbname="go"/>
+        <ref dbkey="GO:0005829" dbname="go"/>
+        <ref dbkey="GO:0005783" dbname="go"/>
+        <ref dbkey="GO:0005886" dbname="go"/>
+        <ref dbkey="GO:0005789" dbname="go"/>
+        <ref dbkey="P20472" dbname="uniprot"/>
+        <ref dbkey="C00305" dbname="kegg.compound"/>
+        <ref dbkey="CHEBI:25107" dbname="chebi"/>
+        <ref dbkey="P05937" dbname="uniprot"/>
+        <ref dbkey="CHEBI:18420" dbname="chebi"/>
+        <ref dbkey="CHEBI:16595" dbname="chebi"/>
+        <ref dbkey="C01245" dbname="kegg.compound"/>
+        <ref dbkey="GO:0005509" dbname="go"/>
+        <ref dbkey="GO:0030163" dbname="go"/>
+        <ref dbkey="GO:0000287" dbname="go"/>
+        <ref dbkey="GO:0051924" dbname="go"/>
+      </cross_references>
+    </entry></entries></database>
