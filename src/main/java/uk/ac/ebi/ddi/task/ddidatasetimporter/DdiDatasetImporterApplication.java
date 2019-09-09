@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import uk.ac.ebi.ddi.ddifileservice.DdiFileServiceApplication;
 import uk.ac.ebi.ddi.ddifileservice.services.IFileSystem;
+import uk.ac.ebi.ddi.ddifileservice.type.CloseableFile;
 import uk.ac.ebi.ddi.service.db.model.dataset.Dataset;
 import uk.ac.ebi.ddi.service.db.model.dataset.DatasetFile;
 import uk.ac.ebi.ddi.service.db.service.dataset.DatasetFileService;
@@ -72,9 +73,9 @@ public class DdiDatasetImporterApplication implements CommandLineRunner {
         }
 
         for (String filePath : files) {
-            try {
+            try (CloseableFile file = fileSystem.getFile(filePath)) {
                 LOGGER.info("Processing file {}", filePath);
-                process(fileSystem.getFile(filePath));
+                process(file);
             } catch (Exception e) {
                 LOGGER.error("Exception occurred when processing file {}, ", filePath, e);
             }
