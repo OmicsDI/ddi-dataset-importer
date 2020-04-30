@@ -19,16 +19,19 @@ import uk.ac.ebi.ddi.service.db.service.dataset.IDatasetService;
 import uk.ac.ebi.ddi.task.ddidatasetimporter.configuration.DatasetImportTaskProperties;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = DdiDatasetImporterApplication.class,
 		initializers = ConfigFileApplicationContextInitializer.class)
 @TestPropertySource(properties = {
-		"s3.env_auth=true",
-		"s3.endpoint_url=https://s3.embassy.ebi.ac.uk",
-		"s3.bucket_name=caas-omicsdi",
-		"s3.region=eu-west-2",
+		"s3.env_auth=false",
+		"s3.endpoint_url=s3url",
+		"s3.bucket_name=bucketname",
+		"s3.region=bucketregion",
+		"s3.access_key=accesskey",
+		"s3.secret_key=secetkey",
 		"importer.database_name=ArrayExpress",
 		"importer.input_directory=testing/importer"
 })
@@ -52,6 +55,7 @@ public class ITS3DatasetImporterApplication {
 	@Autowired
 	private DatasetFileService datasetFileService;
 
+	/*
 	@Before
 	public void setUp() throws Exception {
 		File file = new File(taskProperties.getInputDirectory());
@@ -88,5 +92,10 @@ public class ITS3DatasetImporterApplication {
 	@After
 	public void tearDown() throws Exception {
 		fileSystem.cleanDirectory(taskProperties.getInputDirectory());
-	}
+	}*/
+
+	@Test
+	public void copydata(){
+		fileSystem.copyDirectory("/home/gaur/cellcollective","data/cellcollective");
+    }
 }
